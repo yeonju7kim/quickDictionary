@@ -4,8 +4,6 @@ import tkinter as tk
 
 from english_engish_dictionary import query_word_Oxford, query_word_Papago
 
-icon_path = "C:/workspace/github/quickDictionary/dictionary.bmp"
-
 def ask_word():
     master = tk.Tk()
     master.title('')
@@ -16,7 +14,6 @@ def ask_word():
     listbox.pack()
     listbox.select_set(0)
     listbox.grid(row=0,column=0,rowspan=2)
-    master.iconbitmap(icon_path)
     def handler(e):
         master.quit()
     master.bind('<Return>', handler)#lambda x: master.quit)
@@ -44,7 +41,6 @@ def show_word(word, dictionary):
 
     master = tk.Tk()
     master.title('')
-    master.iconbitmap(icon_path)
 
     def handler(e):
         master.quit()
@@ -69,7 +65,6 @@ def show_word(word, dictionary):
 def ok_no_msgbox(question):
     master = tk.Tk()
     master.title('')
-    master.iconbitmap(icon_path)
     tk.Label(master, text=question).grid(row=0)
     def yes():
         master.quit()
