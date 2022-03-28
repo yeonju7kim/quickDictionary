@@ -4,12 +4,13 @@
 
 # 설치 방법
 
-1. 아래와 같이 release를 다운받습니다.
+1. 아래와 같이 release를 다운받습니다.<br>
 ![image](https://user-images.githubusercontent.com/95571735/160338766-53631501-814d-4c10-881a-482aee10c72c.png)
-
 2. 아무 폴더에나 저장합니다.
 3. 바로가기를 만듭니다.
-4. 바로가기에 단축키를 설정해서 쉽게 사용합니다.(Ctrl+Shift+D를 사용하고 있습니다.)
+4. 바로가기에 단축키를 설정해서 쉽게 사용합니다.(Ctrl+Shift+D를 사용하고 있습니다.)<br>
+![image](https://user-images.githubusercontent.com/95571735/160339550-f7b5de99-98ed-4de2-b483-35c2c7d2dddc.png)
+
 
 # 사용법
 1. 검색하고자 하는 단어를 검색하고, OK를 누르거나 enter를 입력합니다.<br>
