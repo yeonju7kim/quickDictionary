@@ -11,9 +11,10 @@ def ask_word():
     master.title('')
 
     listbox = tk.Listbox(master, selectmode='extended', height=0)
-    listbox.insert(0, "Oxford")
-    listbox.insert(1, "Papago")
+    listbox.insert(1, "Oxford")
+    listbox.insert(0, "Papago")
     listbox.pack()
+    listbox.select_set(0)
     listbox.grid(row=0,column=0,rowspan=2)
     master.iconbitmap(icon_path)
     def handler(e):
@@ -41,32 +42,29 @@ def show_word(word, dictionary):
     elif dictionary == 'Papago':
         definition_list = query_word_Papago(word)
 
-
     master = tk.Tk()
     master.title('')
     master.iconbitmap(icon_path)
+
     def handler(e):
         master.quit()
     master.bind('<Return>', handler)
-
-    definitions= ""
     rowIdx = 0
     for d in definition_list:
-        # definitions = definitions + "\n\n"+ d
         tk.Label(master, text=d, wraplength = 500, anchor='w').grid(row=rowIdx, column=0, columnspan=2)
         rowIdx += 1
-    e2 = tk.Entry(master)
-    e2.grid(row=rowIdx, column=0, columnspan=2)
-    rowIdx += 1
+    if dictionary == 'Oxford':
+        e2 = tk.Entry(master)
+        e2.grid(row=rowIdx, column=0, columnspan=2)
+        rowIdx += 1
     tk.Button(master, text='OK', command=master.quit).grid(row=rowIdx, column=1, sticky=tk.W, pady=4)
     master.mainloop()
-    summary=""
-    try:
+    if dictionary == 'Oxford':
         summary = e2.get()
-        master.destroy()
-        return summary
-    except:
-        return summary
+    elif dictionary == 'Papago':
+        summary = definition_list[0]
+    master.destroy()
+    return summary
 
 def ok_no_msgbox(question):
     master = tk.Tk()

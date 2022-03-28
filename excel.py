@@ -7,7 +7,7 @@ dir_path = "D:/vocab"
 file_path = f"{dir_path}/{dt_now.date()}.xlsx"
 
 def save_excel(word, summary):
-    if word == "" or summary == "":
+    if word == "" or summary == "" or word == None or summary == None:
         return
     if os.path.exists(dir_path) == False:
         os.mkdir(dir_path)

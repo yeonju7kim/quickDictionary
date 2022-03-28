@@ -20,3 +20,7 @@
 3. 본인만의 정의(summary)를 적게 되면, D:/vocab 에 엑셀파일로 저장이 됩니다.
 4. 아래 화면에서 OK를 눌러 계속 단어를 검색할 수도 있고, NO를 눌러 종료할 수도 있습니다.<br>
 ![image](https://user-images.githubusercontent.com/95571735/160339308-954319e0-b930-47d5-811f-45503a863589.png)
+
+# 인스톨러 만드는 법
+
+pyinstaller -w -F QuickDictionary.py

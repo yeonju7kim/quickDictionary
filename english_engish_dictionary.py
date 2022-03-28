@@ -1,11 +1,8 @@
 import requests
 import json
-
-
+from api_credential import *
 language = "en-us"
 word_id = "example"
-import os
-import sys
 import urllib.request
 
 
