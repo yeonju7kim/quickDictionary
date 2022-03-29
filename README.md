@@ -23,4 +23,4 @@
 
 # 인스톨러 만드는 법
 
-pyinstaller -w -F QuickDictionary.py
+pyinstaller -w -F QuickDictionary.py --icon=.\dictionary.ico
